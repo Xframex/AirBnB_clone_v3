@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" objects that handles all default RestFul API actions for cities """
+"""RestFul API actions for cities """
 from models.city import City
 from models.state import State
 from models import storage
@@ -30,7 +30,7 @@ def get_cities(state_id):
 @swag_from('documentation/city/get_city.yml', methods=['GET'])
 def get_city(city_id):
     """
-    Retrieves a specific city based on id
+    Retrieves a specific city based id
     """
     city = storage.get(City, city_id)
     if not city:
